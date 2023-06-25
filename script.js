@@ -8,7 +8,6 @@ const numbersZeroToNine = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const selectedSpecialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '-', '.', '~', '|', '<', '>', '=', '-', '_', '/', ':', ';', '?', '[', ']', '{', '}', '~'];
 
 let symbols = [upperCaseLetters,lowerCaseLetters,numbersZeroToNine,selectedSpecialCharacters];
-console.log(document.querySelector('.rate').innerHTML);
 let btn = document.querySelector('.generate');
 btn.addEventListener('click', display);
 
@@ -60,10 +59,16 @@ function generatePass(res, length) {
 }
 
 function displayStrength(includings){
-    let strength = '';
-    for (let i = 0; i < includings.length; i++) {
-        
+    let l = includings.length
+    let strength = (l==1) ? 'low' : (l==4) ? 'strong' : 'medium';
+    let code = '';
+    for (let i = 0; i < l; i++) {
+        code += `<span class="${strength}"></span>`;        
     }
+    for (let i = 0; i < 4-l; i++) {
+        code += `<span></span>`;     
+    }
+    document.querySelector('.rate').innerHTML = code;
 }
 
 function rndm(min, max) {
