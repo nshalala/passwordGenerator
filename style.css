@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+section {
+    height: 100vh;
+    background-color: rgb(5, 5, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 450px;
+}
+h3{
+    text-align: center;
+    color: #999;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 10px;
+}
+.result,
+.generator{
+    padding: 20px 25px;
+    background-color: #66666691;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result{
+    margin: 20px 0;
+}
+.result h2{
+    color: #777;
+}
+.result i{
+    color: rgb(58, 250, 160);
+    cursor: pointer;
+}
+.generator{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.generator .rangeLength {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.generator .rangeLength label{
+    display: flex;
+    justify-content: space-between;
+}
+.generator .rangeLength label span:last-child{
+    font-size: 20px;
+    color: rgb(58, 250, 160);
+}
+.strength{
+    width: 100%;
+    padding: 15px 25px;
+    background-color: rgb(5, 5, 77);
+    display: flex;
+    justify-content: space-between;
+}
+.strength p{
+    color: #777;
+    font-weight: bold;
+}
+.strength .rate span{
+    border: 1px solid white;
+    padding: 1px 2px;
+    margin: 2px;
+}
+.strength .rate span.low{
+    background-color: red;
+}
+.strength .rate span.medium{
+    background-color: orange;
+}
+.strength .rate span.strong{
+    background-color: green;
+}
+button{
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    border: none;
+    background-color: rgb(58, 250, 160);
+    text-transform: uppercase;
+    font-weight: 600;
+}

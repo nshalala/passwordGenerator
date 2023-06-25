@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h3>Password generator</h3>
+            <div class="result">
+                <h2 class="password">passwordhere</h1>
+                <i class="fa-regular fa-copy fa-lg"></i>
+            </div>
+            <div class="generator">
+                <div class="rangeLength">
+                    <label for="charLeng">
+                        <span>Character Length</span>
+                        <span class="length">8</span>
+                    </label>
+                    <input type="range" name="charLeng" id="charLeng" value="8" min="8" max="20" step="1" />
+                </div>
+                <div>
+                    <input type="checkbox" name="upCase" id="upCase" />
+                    <label for="upCase">Include uppercase letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="lowCase" id="lowCase" />
+                    <label for="lowCase">Include lowercase letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="number" id="number" />
+                    <label for="number">Include numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="symbol" id="symbol" />
+                    <label for="symbol">Include symbols</label>
+                </div>
+                <div class="strength">
+                    <p>STRENGTH</p>
+                    <div class="rate"></div>
+                </div>
+                <button class="generate">generate <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
